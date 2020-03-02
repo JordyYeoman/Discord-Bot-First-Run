@@ -10,7 +10,8 @@ module.exports = async (msg, args) => {
   if (!args.length) return;
   const browser = await puppeteer.launch({
     headless: true,
-    defaultViewport: null
+    defaultViewport: null,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"]
   });
   const username = args;
   const page = await browser.newPage();
