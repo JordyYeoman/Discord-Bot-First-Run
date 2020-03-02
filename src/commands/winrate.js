@@ -21,7 +21,7 @@ module.exports = async (msg, args) => {
 
   const winRateDiv = await page
     .waitForXPath(
-      "/html/body/div[2]/div[2]/div/div/div[5]/div[2]/div[1]/div[1]/div/div[2]/div[3]/span[2]/span[3]",
+      "/html/body/div[2]/div[2]/div/div/div[5]/div[2]/div[2]/div/div[2]/div[1]/div[1]/table/tbody/tr[2]/td[1]/div/div[2]",
       { timeout: 1000 }
     )
     .catch(async e => {
